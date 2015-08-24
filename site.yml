@@ -1,0 +1,4 @@
+- hosts: localhost
+  tasks:
+    - name: Download all required roles
+      shell: ansible-galaxy install -r requirements.yml
