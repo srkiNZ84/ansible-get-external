@@ -5,6 +5,11 @@ roles.
 The use case for this would be if you're setting up a site which depends on a whole bunch of external roles, you can
 specify (within an Ansible playbook) that these should be installed prior to running the rest of the playbooks.
 
+e.g.
+```- hosts: web
+  roles:
+    - { role: external/bennojoy.nginx, sudo: yes, tags: ['web', 'nginx'] }```
+
 ## Running
 `ansible-playbook -i hosts site.yml --connection=local`
 
